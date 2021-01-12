@@ -3,7 +3,6 @@ import { TICKRATE } from "./constants";
 import initButtons from "./buttons";
 
 function init() {
-  console.log("starting game");
   initButtons(handleUserAction);
 
   let nextTimeToTick = Date.now();
