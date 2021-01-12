@@ -88,6 +88,10 @@ body {
   background-color: rebeccapurple;
   text-emphasis-color: teal;
   color: whitesmoke;
+  padding: 25px;
+  font-size: 20px;
+  font-weight: bold;
+  border-radius: 15px;
 }
 
 .modal:empty {
