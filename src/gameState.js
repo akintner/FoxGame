@@ -41,7 +41,6 @@ const gameState = {
     return this.clock;
   },
   startGame() {
-    console.log("hatching");
     this.current = "HATCHING";
     this.wakeTime = this.clock + 3;
     modFox("egg");
@@ -49,7 +48,6 @@ const gameState = {
     writeModal();
   },
   handleUserAction(icon) {
-    console.log(icon);
     if (
       ["SLEEP", "FEEDING", "CELEBRATING", "HATCHING"].includes(this.current)
     ) {
@@ -76,7 +74,7 @@ const gameState = {
   },
   wake() {
     console.log("woke, bro");
-    this.current = "IDILING";
+    this.current = "IDLING";
     this.wakeTme = -1;
     modFox("idling");
     this.scene = Math.random() > RAIN_CHANCE ? 0 : 1;
@@ -99,13 +97,12 @@ const gameState = {
     modFox("hungry");
   },
   die() {
-    console.log("OMG YOU DIED");
     this.current = "DEAD";
     modScene("dead");
     modFox("dead");
     this.clearTimes();
     writeModal(
-      "The fox has died, alas <br/> Press the middle button to restart."
+      "The fox has died, alas. <br/> Press the middle button to restart."
     );
   },
   startCelebrating() {
